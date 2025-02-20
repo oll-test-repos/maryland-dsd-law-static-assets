@@ -1,0 +1,54 @@
+// Font Weight Guide
+// -----------------
+// 100 - thin
+// 200 - extralight
+// 300 - light
+// 400 - regular / normal
+// 500 - medium
+// 600 - semi-bold
+// 700 - bold
+// 800 - extrabold
+// 900 - black / heavy
+
+// Font Face mixin
+@mixin fontFace($fontName, $fileName, $fontWeight, $fontStyle) {
+  @font-face {
+    font-family: "#{$fontName}";
+    src: url("#{$fileName}.woff2") format("woff2"),
+         url("#{$fileName}.woff") format("woff");
+    font-weight: #{$fontWeight};
+    font-style: #{$fontStyle};
+    font-display: swap;
+  }
+}
+
+
+// 100 - thin
+// Normal
+@include fontFace("Roboto Mono", "roboto-mono-thin", "100", "normal");
+// Italic
+@include fontFace("Roboto Mono", "roboto-mono-thinitalic", "100", "italic");
+
+// 300 - light
+// Normal
+@include fontFace("Roboto Mono", "roboto-mono-light", "300", "normal");
+// Italic
+@include fontFace("Roboto Mono", "roboto-mono-lightitalic", "300", "italic");
+
+// 400 - regular
+// Normal
+@include fontFace("Roboto Mono", "roboto-mono-regular", "400", "normal");
+// Italic
+@include fontFace("Roboto Mono", "roboto-mono-italic", "400", "italic");
+
+// 500 - medium
+// Normal
+@include fontFace("Roboto Mono", "roboto-mono-medium", "500", "normal");
+// Italic
+@include fontFace("Roboto Mono", "roboto-mono-mediumitalic", "500", "italic");
+
+// 700 - bold
+// Bold
+@include fontFace("Roboto Mono", "roboto-mono-bold", "700", "normal");
+// Bold Italic
+@include fontFace("Roboto Mono", "roboto-mono-bolditalic", "700", "italic");

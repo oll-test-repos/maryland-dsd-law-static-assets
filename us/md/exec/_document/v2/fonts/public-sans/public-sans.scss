@@ -1,0 +1,78 @@
+// Font Weight Guide
+// -----------------
+// 100 - thin
+// 200 - extralight
+// 300 - light
+// 400 - regular / normal
+// 500 - medium
+// 600 - semi-bold
+// 700 - bold
+// 800 - extrabold
+// 900 - black / heavy
+
+// Font Face mixin
+@mixin fontFace($fontName, $fileName, $fontWeight, $fontStyle) {
+  @font-face {
+    font-family: "#{$fontName}";
+    src: url("#{$fileName}.woff2") format("woff2"),
+         url("#{$fileName}.woff") format("woff");
+    font-weight: #{$fontWeight};
+    font-style: #{$fontStyle};
+    font-display: swap;
+  }
+}
+
+
+// 100 - thin
+// Normal
+@include fontFace("Public Sans", "public-sans-thin", "100", "normal");
+// Italic
+@include fontFace("Public Sans", "public-sans-thinitalic", "100", "italic");
+
+// 200 - extralight
+// Normal
+@include fontFace("Public Sans", "public-sans-extralight", "200", "normal");
+// Italic
+@include fontFace("Public Sans", "public-sans-extralightitalic", "200", "italic");
+
+// 300 - light
+// Normal
+@include fontFace("Public Sans", "public-sans-light", "300", "normal");
+// Italic
+@include fontFace("Public Sans", "public-sans-lightitalic", "300", "italic");
+
+// 400 - regular
+// Normal
+@include fontFace("Public Sans", "public-sans-regular", "400", "normal");
+// Italic
+@include fontFace("Public Sans", "public-sans-italic", "400", "italic");
+
+// 500 - medium
+// Normal
+@include fontFace("Public Sans", "public-sans-medium", "500", "normal");
+// Italic
+@include fontFace("Public Sans", "public-sans-mediumitalic", "500", "italic");
+
+// 600 - semi-bold
+// Normal
+@include fontFace("Public Sans", "public-sans-semibold", "600", "normal");
+// Italic
+@include fontFace("Public Sans", "public-sans-semibolditalic", "600", "italic");
+
+// 700 - bold
+// Bold
+@include fontFace("Public Sans", "public-sans-bold", "700", "normal");
+// Bold Italic
+@include fontFace("Public Sans", "public-sans-bolditalic", "700", "italic");
+
+// 800 - extrabold
+// Normal
+@include fontFace("Public Sans", "public-sans-extrabold", "800", "normal");
+// Italic
+@include fontFace("Public Sans", "public-sans-extrabolditalic", "800", "italic");
+
+// 900 - black
+// Normal
+@include fontFace("Public Sans", "public-sans-black", "900", "normal");
+// Italic
+@include fontFace("Public Sans", "public-sans-blackitalic", "900", "italic");
